@@ -1,0 +1,16 @@
+{
+    "Name": "Vishal",
+    "Age": 19,
+    "CGPA": 7.93,
+    "ID": "2123",
+    "List": [
+        "ListObj1",
+        "ListObj2"
+    ],
+    "Tuple": [
+        "TupleObj1",
+        "TupleObj2"
+    ],
+    "Boolean": false,
+    "NoneType": null
+}
