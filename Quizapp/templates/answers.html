@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Quiz Answers</title>
+		<!-- <link href="../static/css/allQuiz.css" rel="stylesheet"> -->
+		 <link rel="stylesheet" href="{{ url_for('static', filename='css/allQuiz.css') }}">
+		 <link rel="icon" href="{{ url_for('static', filename='images/tiango.png') }}" type="image" sizes="20x20">
+
+<style>
+#table2 {
+  padding: 5px 5px;
+  background-color: white;
+  border-radius: 10px 10px 10px 10px;
+  margin: 10px 10px 10px 10px
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.center
+{
+ text-align: center;
+ list-style-position: inside;
+}
+ol.center li
+{
+ text-align: left;
+ margin-left: 38%;
+ margin-right: auto;
+}
+</style>
+	</head>
+
+	<body>
+
+	<div id="container">
+		<form action="{{ url_for('logout') }}" >
+			<input class="logout" type="submit" value="Logout" />
+			</form>
+
+			<form action="{{ url_for('display') }}" method="POST">
+			<input class="back" type="submit" value="Back"/>
+			</form>
+
+			<h1 align="center"> {{ quizName }} Quiz</h1>
+			<hr>
+			<div align="center">
+				<table id="table2">
+				{% set count = namespace(value=1) %}
+				{% for question in questions %}
+				<ol class="center" type="1">
+				<tr>
+					<td>
+					<li> {{ question[0] }} <li>
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<input type="radio"> {{ question[1] }}
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<input type="radio" > {{ question[2] }}
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<input type="radio" > {{ question[3] }}
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<input type="radio" > {{ question[4] }}
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						<hr>
+						Actual answer : {{ question[5] }}
+					</td>
+				</tr>
+
+				<tr>
+					<td>
+						Your answer : {{ user_ans[count.value] }}
+						<hr>
+					</td>
+				</tr>
+
+				</ol>
+				{% set count.value = count.value + 1 %}
+				{% endfor %}
+			</table>
+		</div>
+
+	</div>
+	</body>
+</html>
+

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Instructions</title>
+		<!-- <link href="../static/css/allQuiz.css" rel="stylesheet"> -->
+		 <link rel="stylesheet" href="{{ url_for('static', filename='css/allQuiz.css') }}">
+		 <link rel="icon" href="{{ url_for('static', filename='images/tiango.png') }}" type="image" sizes="20x20">
+<style>
+
+.center
+{
+ text-align: center;
+ list-style-position: inside;
+}
+ol.center li
+{
+ text-align: left;
+ margin-left: 38%;
+ margin-right: auto;
+}
+</style>
+	</head>
+
+	<body>
+
+	<div id="container">
+		<div>
+			<h1 align="center"> Welcome {{ name }} </h1>
+
+			<!-- Logout Button -->
+			<form action="{{ url_for('logout') }}" >
+			<input class="logout" type="submit" value="Logout" />
+			</form>
+
+			<!-- Back Button -->
+			<form action="{{ url_for('allQuizes') }}" method="POST">
+			<input class="back" type="submit" value="Back"/>
+			</form>
+		</div>
+
+		<hr>
+
+		<div align="center">
+			<p>Instructions for {{ quiz }} Quiz</p>
+			<ol class="center">
+				<li>The quiz consists a total of 10 questions.</li>
+				<!-- <li>The time limit is 10 minutes.</li> -->
+				{% if quiz == "Aptitude" %}
+					<li>Each question is of 2 marks.</li>
+				{% else %}
+					<li>Each question is of 1 mark.</li>
+				{% endif %}
+				<li>There is no negative marking.</li>
+				<li>You can take this test only <b>once.</b></li>
+			</ol>
+
+			<!-- Start Test Button -->
+			<form action="{{ url_for('questions') }}" method="POST">
+			 <input type="submit" value="Start" />
+			 </form>
+		</div>
+
+	</div>
+	</body>
+</html>
