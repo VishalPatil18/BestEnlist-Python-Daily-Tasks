@@ -1,0 +1,41 @@
+{% extends "base.html"%}
+{% block content %}
+    <div class="card">
+        <div class="card-header">
+            <p>Question {{ game["id"] }} of {{ session["total_questions"] }}</p>
+            <h2>{{ game["question"] }}</h2>
+        </div>
+        <div class="card-body">
+            <form action="/start_quiz" method="POST">
+                <div class="choice"><input type="radio" name="given_answer" value="{{ game['choice1']}}"><label><h5 class="card-title" style="font-weight: 300;"> {{ game['choice1'] }}</h5></label></div>
+                <div class="choice"><input type="radio" name="given_answer" value="{{ game['choice2']}}"><label><h5 class="card-title" style="font-weight: 300;"> {{ game['choice2'] }}</h5></label></div>
+                <div class="choice"><input type="radio" name="given_answer" value="{{ game['choice3']}}"><label><h5 class="card-title" style="font-weight: 300;"> {{ game['choice3'] }}</h5></label></div>
+                <div class="choice"><input type="radio" name="given_answer" value="{{ game['choice4']}}"><label><h5 class="card-title" style="font-weight: 300;"> {{ game['choice4'] }}</h5></label></div>
+            <input type="submit" class="btn btn-primary" value="Submit Answer">
+            </form>
+        </div>
+    </div>
+
+    <div class="card border-primary mb-3" style="margin-top: 10px;">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="card-body text-primary">
+                        {% if category == "correct" %}
+                            <h5 class="card-title">{{ message }}</h5>
+                        {% elif category == "wrong" %}
+                            <h5 class="card-title">{{ message }}</h5>
+                        {% else %}
+                            <h5 class="card-title">{{ message }}</h5>
+                            <button class="btn btn-primary" href="/">Home</button>
+                        {% endif %}
+                    </div>
+                    <div class="card-header">Score {{ session["score"] }}</div>
+                {% endfor %}
+            {% else %}
+                <h3>Score {{ session["score"] }}</h3>
+            {% endif %}
+        {% endwith %}
+    </div>
+    
+{% endblock %}

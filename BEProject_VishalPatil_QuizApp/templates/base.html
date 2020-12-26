@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"> -->
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" style="font-size: 5vh;" href="#">
+                <img src="{{ url_for('static',filename='images/icon.png') }}" height="65vh" class="d-inline-block align-top" alt="">
+                Quizzer
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav my-2 my-sm-0">
+                    <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="/">About Us</a>
+                </div>
+            </div>
+        </nav>
+        <div class="row" style="margin-top: 5%;">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="container quiz-board">
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        
+    </div>
+    <script src="{{ url_for('static',filename='css/jquery.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static',filename='css/bootstrap.min.js') }}" crossorigin="anonymous"></script>
+</body>
+</html>

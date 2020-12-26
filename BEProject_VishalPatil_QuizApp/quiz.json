@@ -1,0 +1,146 @@
+{
+"C++":    
+[
+    {
+        "id": 1,
+        "question":"Which of the following is not the keyword in C++?",
+        "choice1": "volatile",
+        "choice2": "friend",
+        "choice3": "extends",
+        "choice4": "this",
+        "answer": "extends"
+    },
+    {
+        "id": 2,
+        "question":"Objects created using new operator are stored in __ memory.",
+        "choice1": "Cache",
+        "choice2": "Heap",
+        "choice3": "Stack",
+        "choice4": "None of the above.",
+        "answer": "Heap"
+    },
+    {
+        "id": 3,
+        "question":"A constructor is called whenever",
+        "choice1": "an objective is declared",
+        "choice2": "an object is used",
+        "choice3": "a class is declared",
+        "choice4": "a class is used",
+        "answer": "an objective is declared"
+    },
+    {
+        "id": 4,
+        "question":"C++ was originally developed by",
+        "choice1": "Clocksin and Mellish",
+        "choice2": "Donald E Knuth",
+        "choice3": "Sir Richard Hadlee",
+        "choice4": "Bjarne Stroustrup",
+        "answer": "Bjarne Stroustrup"
+    },
+    {
+        "id": 5,
+        "question":"A class having no name",
+        "choice1": "is not allowed",
+        "choice2": "cannot have a constructor",
+        "choice3": "can have a destructor",
+        "choice4": "can be passed as an argument",
+        "answer": "cannot have a constructor"
+    }
+],
+"Python":    
+[
+    {
+        "id": 1,
+        "question":"What is the maximum possible length of an identifier?",
+        "choice1": "16",
+        "choice2": "32",
+        "choice3": "64",
+        "choice4": "None of the above",
+        "answer": "None of the above"
+    },
+    {
+        "id": 2,
+        "question":"Who developed the Python language?",
+        "choice1": "Zim Den",
+        "choice2": "Guido van Rossum",
+        "choice3": "Niene Stom",
+        "choice4": "Wick van Rossum",
+        "answer": "Guido van Rossum"
+    },
+    {
+        "id": 3,
+        "question":"In which language is Python written?",
+        "choice1": "English",
+        "choice2": "PHP",
+        "choice3": "C",
+        "choice4": "All of the above",
+        "answer": "C"
+    },
+    {
+        "id": 4,
+        "question":"Which one of the following is the correct extension of the Python file",
+        "choice1": ".py",
+        "choice2": ".python",
+        "choice3": ".p",
+        "choice4": ".pth",
+        "answer": ".py"
+    },
+    {
+        "id": 5,
+        "question":"Which character is used in Python to make a single line comment?",
+        "choice1": "/",
+        "choice2": "//",
+        "choice3": "#",
+        "choice4": "!",
+        "answer": "#"
+    }
+],
+"HTML":    
+[
+    {
+        "id": 1,
+        "question":"HTML stands for -",
+        "choice1": "HighText Machine Language",
+        "choice2": "HyperText and links Markup Language",
+        "choice3": "HyperText Markup Language",
+        "choice4": "None of the above",
+        "answer": "HyperText Markup Language"
+    },
+    {
+        "id": 2,
+        "question":"Which of the following element is responsible for making the text bold in HTML?",
+        "choice1": "<pre>",
+        "choice2": "<a>",
+        "choice3": "<b>",
+        "choice4": "<br>",
+        "answer": "<b>"
+    },
+    {
+        "id": 3,
+        "question":"Which of the following tag is used for inserting the largest heading in HTML?",
+        "choice1": "<h3>",
+        "choice2": "<h1>",
+        "choice3": "<h>",
+        "choice4": "<h6>",
+        "answer": "<h1>"
+    },
+    {
+        "id": 4,
+        "question":"Which of the following tag is used to insert a line-break in HTML?",
+        "choice1": "<br>",
+        "choice2": "<a>",
+        "choice3": "<pre>",
+        "choice4": "<b>",
+        "answer": "<br>"
+    },
+    {
+        "id": 5,
+        "question":"Which character is used to represent the closing of a tag in HTML?",
+        "choice1": "/",
+        "choice2": "//",
+        "choice3": "#",
+        "choice4": "!",
+        "answer": "/"
+    }
+]
+}
