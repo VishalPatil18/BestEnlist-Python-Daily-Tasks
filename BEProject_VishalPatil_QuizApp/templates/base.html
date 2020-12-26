@@ -3,7 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Document</title>
+    <meta property="og:image" content="{{ url_for('static',filename='images/icon.png') }}" />
+    <title>Quizzer</title>
+    <link rel="shortcut icon" href="{{ url_for('static',filename='images/icon.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
     <!-- <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"> -->
 </head>
@@ -20,21 +22,14 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav my-2 my-sm-0">
                     <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
-                    <a class="nav-item nav-link" href="/">About Us</a>
+                    <a class="nav-item nav-link" href="/about">About Us</a>
                 </div>
             </div>
         </nav>
-        <div class="row" style="margin-top: 5%;">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <div class="container quiz-board">
-                    {% block content %}
-                    {% endblock %}
-                </div>
-            </div>
-            <div class="col-2"></div>
+        <div class="container-fluid" style="padding: 0; margin: 0; border: 0;">
+            {% block content %}
+            {% endblock %}
         </div>
-        
     </div>
     <script src="{{ url_for('static',filename='css/jquery.js') }}" crossorigin="anonymous"></script>
     <script src="{{ url_for('static',filename='css/bootstrap.min.js') }}" crossorigin="anonymous"></script>

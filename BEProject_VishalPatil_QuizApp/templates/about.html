@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta property="og:image" content="{{ url_for('static',filename='images/icon.png') }}" />
+    <title>Quizzer</title>
+    <link rel="shortcut icon" href="{{ url_for('static',filename='images/icon.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.min.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}"> -->
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" style="font-size: 5vh;" href="#">
+                <img src="{{ url_for('static',filename='images/icon.png') }}" height="65vh" class="d-inline-block align-top" alt="">
+                Quizzer
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav my-2 my-sm-0">
+                    <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="/about">About Us</a>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <div style="margin-top: 5%;">
+                <img src="{{ url_for('static',filename='images/aboutus.webp') }}" width="470px" style="float: left;" class="d-inline-block align-top" alt="">
+                <div style="text-align: center;">
+                    <div class="card">
+                        <h5 class="card-header">About Quizzer</h5>
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Special title treatment</h5> -->
+                            <p class="card-text" style="text-align: left;">This is a Quiz web app project made as a part of my internship at <a href="https://bestenlist.com/" title="Best Enlist">Best Enlist</a>. 
+                                <br>It is a quiz app where we can choose from 3 topics(C++, Python, HTML) and answer some MCQ questions with single correct answer.
+                                The Score is displayed on the screen as soon as the question is answered.
+                                <br><br><br>
+                                Tech Stack Used:
+                            </p>
+                            <div style="float: left;">
+                                <img src="{{ url_for('static',filename='images/flask.png') }}" style="height: 60px;" title="Flask">
+                                <img src="{{ url_for('static',filename='images/html.png') }}" style="height: 60px;" title="HTML">
+                                <img src="{{ url_for('static',filename='images/css.png') }}" style="height: 60px;" title="CSS">
+                                <img src="{{ url_for('static',filename='images/javascript.png') }}" style="height: 60px;" title="Javascript">
+                                <img src="{{ url_for('static',filename='images/bootstrap.png') }}" style="height: 55px;" title="Bootstrap">
+                                <img src="{{ url_for('static',filename='images/json.png') }}" style="height: 60px;" title="JSON">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><br>
+        <!-- FOOTER -->
+        <div class="container card text-white bg-dark">
+            <div class="card-header" style="text-align: center; width: 100%;"><h2>Connect With Me</h2></div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-1">
+                    <a class="contact-icons" href="https://www.instagram.com/_vishal_._lahsiv_/" title="Vishal's Instagram Profile">
+                        <img src="{{ url_for('static',filename='images/instagram.png') }}" style="height: 51px;padding: 2px;">
+                    </a>
+                    <a class="contact-icons" href="https://twitter.com/VishalPatil1810" title="Vishal's Twitter Profile">
+                        <img src="{{ url_for('static',filename='images/twitter.png') }}" style="height: 51px; padding: 2px;">
+                    </a>
+                    <a class="contact-icons" href="https://linkedin.com/in/vishalrameshpatil" title="Vishal's LinkedIn Profile">
+                        <img src="{{ url_for('static',filename='images/linkedin.png') }}" style="height: 51px; padding: 2px;">
+                    </a>
+                    <a class="contact-icons" href="mailto:vishalrp18100@gmail.com" target="_blank" title="Mail to Vishal">
+                        <img src="{{ url_for('static',filename='images/gmail.png') }}" style="height: 51px; padding: 2px;">
+                    </a>
+                    <a class="contact-icons" href="https://github.com/SpecTEviL" title="Vishal's GitHub Profile">
+                        <img src="{{ url_for('static',filename='images/github.png') }}" style="height: 51px; padding: 2px;">
+                    </a>
+                    <a class="contact-icons" href="https://www.youtube.com/channel/UCuLhl2ErufGwLFJlHKmBPGA" title="Vishal's Youtube Channel">
+                        <img src="{{ url_for('static',filename='images/youtube.png') }}" style="height: 51px; padding: 2px;">
+                    </a><br><br>
+                    <p style="float: left;">Made by @<a class="madeby" href="https://spectevil.github.io/" title="Vishal's  Portfolio">SpecTEviL</a></p>
+                    <p class="blockquote-footer" style="float: right;">Feel free to Connect</p>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static',filename='css/jquery.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static',filename='css/bootstrap.min.js') }}" crossorigin="anonymous"></script>
+</body>
+</html>

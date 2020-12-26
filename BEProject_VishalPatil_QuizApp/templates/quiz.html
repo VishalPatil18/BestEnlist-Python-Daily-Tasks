@@ -1,42 +1,50 @@
 {% extends "base.html"%}
 {% block content %}
 <h1 style="text-align: center; font-size: 4em; margin-top: 5%;">QUIZZER by SpecTEviL</h1>
-<div class="card text-white bg-primary mb-3" style="margin-top: 5%;">
-    <form action="/" method="POST">
-        <div class="card-header" style="font-size: xx-large; text-align: center;"><label>Select the Topic</label></div>
-        <div class="card-body">
-            <h5 class="card-title" style="text-align: center;">
-                <select name="theme">
-                    {% for theme in quizapp %}
-                    <option value={{ theme }}>{{ theme }}</option>
-                    {% endfor %}
-                </select>
-            </h5>
-            <div class="container">
-                <p class="card-text" style="float: right;"><button type="submit" class="btn btn-primary">Start Quiz</button></p>
-                <!-- Instructions modal -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Instructions</button>
-                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalCenterTitle" style="color: black;">Instructions</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            </div>
-                            <div class="modal-body" style="color: black;">
-                            - There will be 5 question for each Topic.<br>
-                            - All the questions are MCQ with single correct answer.<br>
-                            - Each question carries 1 point.<br>
-                            - Your current status is displyed below the question.<br>
+<div class="row">
+    <div style="margin-left: 10%;">
+        <img src="{{ url_for('static',filename='images/topics.webp') }}" width="500vh">
+    </div>
+    <div style="margin-left: 15px; width: 500px; float: right;">
+        <div class="card text-white bg-primary mb-3" style="margin-top: 5%;">
+            <form action="/" method="POST">
+                <div class="card-header" style="font-size: xx-large; text-align: center;"><label>Select the Topic</label></div>
+                <div class="card-body">
+                    <h5 class="card-title" style="text-align: center;">
+                        <select name="theme">
+                            {% for theme in quizapp %}
+                            <option value={{ theme }}>{{ theme }}</option>
+                            {% endfor %}
+                        </select>
+                    </h5>
+                    <div class="container">
+                        <p class="card-text" style="float: right;"><button type="submit" class="btn btn-primary">Start Quiz</button></p>
+                        <!-- Instructions modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Instructions</button>
+                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle" style="color: black;">Instructions</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body" style="color: black;">
+                                    - There will be 5 question for each Topic.<br>
+                                    - All the questions are MCQ with single correct answer.<br>
+                                    - Each question carries 1 point.<br>
+                                    - All questions are compulsory therefore, you cannot proceed furthur without answering.<br>
+                                    - Your current status is displyed below the question.<br>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
-    </form>
+    </div>
 </div>
 
 {% endblock %}

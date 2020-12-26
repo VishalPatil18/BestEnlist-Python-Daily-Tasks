@@ -9,7 +9,6 @@ with open('quiz.json') as file:
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secretkey'
 
-
 # Routes for the app
 @app.route("/",methods=['GET','POST'])
 def quiz():
@@ -52,6 +51,11 @@ def start_quiz():
 
     return render_template("start_quiz.html",
     game = session["current_question"])
+
+
+@app.route("/about")
+def about():
+    return render_template('about.html')
 
 
 if __name__ == "__main__":
