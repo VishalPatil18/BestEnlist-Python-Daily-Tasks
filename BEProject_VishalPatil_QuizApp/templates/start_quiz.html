@@ -30,7 +30,7 @@
                             <a href="/"><button class="btn btn-primary">Home</button></a>
                         {% endif %}
                     </div>
-                    <div class="card-header">Your Final Score was {{ session["score"] }}</div>
+                    <div class="card-header">Your Score is {{ session["score"] }}</div>
                 {% endfor %}
             {% else %}
                 <h3>Score {{ session["score"] }}</h3>
