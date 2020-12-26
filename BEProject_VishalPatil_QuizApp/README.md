@@ -1,5 +1,5 @@
-## Quizzer by SpecTEviL
-### A Quiz/Exam conducting platform
+<h1 align="center">Quizzer by SpecTEviL</a></h1>
+<h3 align="center">A Quiz/Exam conducting platform</h3>  
 
 <p align="center"><img src="https://github.com/SpecTEviL/BestEnlist-Python-Daily-Tasks/blob/master/BEProject_VishalPatil_QuizApp/Report/1.webp" alt="Report 1" height="450" /></p>
 
